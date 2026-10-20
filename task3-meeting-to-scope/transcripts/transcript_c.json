@@ -1,0 +1,23 @@
+{
+  "id": "MEET-C",
+  "project_name": "Apex Professional Directory",
+  "title": "Follow-Up Scoping & Change Request Meeting",
+  "date": "2026-10-18T16:00:00Z",
+  "participants": [
+    { "name": "Alex Mercer", "role": "Lead AI Tech Consultant" },
+    { "name": "Jordan Rivera", "role": "Founder & CEO, Apex Directory" }
+  ],
+  "transcript": [
+    { "speaker": "Alex Mercer", "timestamp": "00:02", "text": "Hi Jordan, good to connect again. We reviewed your initial scope from last week. What changes or new considerations came up since our last call?" },
+    { "speaker": "Jordan Rivera", "timestamp": "00:18", "text": "Our board approved the project, but we have a couple of critical updates. First, regarding the location radius search: we decided to expand into Canada next quarter, so the search radius must support both miles and kilometers toggle, not just miles." },
+    { "speaker": "Alex Mercer", "timestamp": "00:44", "text": "Understood. That modifies requirement REQ-001. We will update the geocoding unit selector to support miles and km." },
+    { "speaker": "Jordan Rivera", "timestamp": "00:58", "text": "Second, to keep our budget within target, we want to drop the verified member badge overlay (REQ-003) for now. Our team can manually verify badges in Phase 2." },
+    { "speaker": "Alex Mercer", "timestamp": "01:15", "text": "Understood. We will remove REQ-003 from the Phase 1 deliverables and deduct the associated design and frontend development hours." },
+    { "speaker": "Jordan Rivera", "timestamp": "01:28", "text": "Third, we have a new requirement: we need a multi-category CSV import tool so we can bulk-upload 2,000 contractor profiles mapped across multiple parent and sub-categories simultaneously." },
+    { "speaker": "Alex Mercer", "timestamp": "01:46", "text": "Got it. That is a new requirement (REQ-006). Brilliant Directories has a standard CSV member import tool, but mapping multiple categories requires specific column formatting and validation scripts." },
+    { "speaker": "Jordan Rivera", "timestamp": "02:08", "text": "Also, our sales VP asked if you could just squeeze in a two-way sync with our Salesforce CRM so every customer inquiry auto-generates a Lead object in Salesforce. Can that just be bundled into the current quote?" },
+    { "speaker": "Alex Mercer", "timestamp": "02:30", "text": "Salesforce bidirectional API integration is a major external system integration involving OAuth2 tokens, field mapping, and webhook error handling. That is strictly outside the scope of Phase 1 and cannot be bundled into the current quote. I will document it as an out-of-scope item with a separate change order quote." },
+    { "speaker": "Jordan Rivera", "timestamp": "02:58", "text": "Fair enough. Glad you caught that before we had misunderstandings. Finally, our board pushed up our product launch: we need everything delivered in 3 weeks instead of 4 weeks." },
+    { "speaker": "Alex Mercer", "timestamp": "03:15", "text": "Understood. We will update the WBS schedule, recalculate the development sprint allocations, and generate a Scope Change Report highlighting the added, modified, removed, and out-of-scope items for your formal sign-off." }
+  ]
+}

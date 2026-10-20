@@ -1,0 +1,22 @@
+{
+  "id": "MEET-B",
+  "project_name": "HealthMatch Directory",
+  "title": "E-Commerce & Membership Monetization Discovery",
+  "date": "2026-10-14T14:30:00Z",
+  "participants": [
+    { "name": "Alex Mercer", "role": "Lead AI Tech Consultant" },
+    { "name": "Priya Sharma", "role": "Founder, HealthMatch" }
+  ],
+  "transcript": [
+    { "speaker": "Alex Mercer", "timestamp": "00:02", "text": "Hi Priya, let's walk through your monetization roadmap for HealthMatch." },
+    { "speaker": "Priya Sharma", "timestamp": "00:12", "text": "Currently, all 800 therapists on our site are on a legacy free tier. We need to transition them to a paid recurring subscription model starting next month." },
+    { "speaker": "Alex Mercer", "timestamp": "00:30", "text": "Understood. What payment provider are you planning to use, and what membership tiers do you need?" },
+    { "speaker": "Priya Sharma", "timestamp": "00:45", "text": "We already have a verified business Stripe account. We want three tiers: Free Basic, Professional at $49/month, and Clinic VIP at $149/month with featured homepage placement." },
+    { "speaker": "Alex Mercer", "timestamp": "01:05", "text": "Brilliant Directories has native Stripe integration that supports 3D Secure verification, recurring billing webhooks, and automatic downgrades on payment failure. We can configure that directly via the Payment Settings." },
+    { "speaker": "Priya Sharma", "timestamp": "01:25", "text": "What about invoice receipts? Our therapists need branded PDF tax receipts for their business expenses whenever a monthly payment clears." },
+    { "speaker": "Alex Mercer", "timestamp": "01:40", "text": "We can enable automated email invoice receipts configured with your clinic branding and tax identification numbers." },
+    { "speaker": "Priya Sharma", "timestamp": "01:55", "text": "And if someone wants to cancel, can they do it directly from their member dashboard without having to email support?" },
+    { "speaker": "Alex Mercer", "timestamp": "02:10", "text": "Yes, we can enable the member self-service subscription cancellation setting so members can manage their billing without manual administrative overhead." },
+    { "speaker": "Priya Sharma", "timestamp": "02:25", "text": "Excellent. We need this tested and launched in 3 weeks." }
+  ]
+}

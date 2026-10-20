@@ -1,0 +1,24 @@
+{
+  "id": "MEET-A",
+  "project_name": "Apex Professional Directory",
+  "title": "Initial Scoping Discovery: Search & Member Discovery",
+  "date": "2026-10-12T10:00:00Z",
+  "participants": [
+    { "name": "Alex Mercer", "role": "Lead AI Tech Consultant" },
+    { "name": "Jordan Rivera", "role": "Founder & CEO, Apex Directory" }
+  ],
+  "transcript": [
+    { "speaker": "Alex Mercer", "timestamp": "00:01", "text": "Thanks for taking the time, Jordan. To start, what is the biggest pain point you're seeing with the current directory website?" },
+    { "speaker": "Jordan Rivera", "timestamp": "00:15", "text": "Our directory lists about 1,500 contractors and home service pros, but visitors keep telling us our search is useless. If someone searches for an electrician in zip code 90210, it only shows pros located strictly in 90210. It ignores pros in the neighboring zip code two miles away." },
+    { "speaker": "Alex Mercer", "timestamp": "00:45", "text": "Understood. So you need a location-based radius search that allows visitors to filter contractors within a configurable distance—say 10, 25, or 50 miles." },
+    { "speaker": "Jordan Rivera", "timestamp": "01:02", "text": "Exactly. A 25-mile radius search is essential for our customers. Secondly, we need structured category filtering. Right now, categories are flat. We want top-level trades like Electrical, Plumbing, HVAC, with subcategories like Residential Rewiring and Commercial HVAC." },
+    { "speaker": "Alex Mercer", "timestamp": "01:30", "text": "Got it. In Brilliant Directories, there's built-in support for top and sub-level categories, as well as Google Maps geocoding for radius search. We should check if we can configure those natively rather than coding custom search from scratch." },
+    { "speaker": "Jordan Rivera", "timestamp": "01:52", "text": "That would be huge if it saves us budget! We also want a verified member badge overlay on search result cards. When a contractor passes license verification, we want a gold 'Verified Pro' checkmark badge on their profile photo." },
+    { "speaker": "Alex Mercer", "timestamp": "02:15", "text": "That's a frontend widget styling task. What about mobile? How is the current layout performing on phones?" },
+    { "speaker": "Jordan Rivera", "timestamp": "02:24", "text": "It's awkward. On iPhone, the search bar wraps below the fold and the hamburger menu covers the search button. We need the mobile header and search widget streamlined." },
+    { "speaker": "Jordan Rivera", "timestamp": "02:45", "text": "One more thing—could we also add an online booking calendar with split payments so homeowners can book and pay an electrician directly on our platform?" },
+    { "speaker": "Alex Mercer", "timestamp": "03:05", "text": "An escrow-based split booking calendar is a major custom development project that involves payment regulations, merchant onboarding, and complex state management. I recommend we keep Phase 1 focused on search, radius, mobile UX, and verified badges, and treat marketplace booking as a separate Phase 2 phase." },
+    { "speaker": "Jordan Rivera", "timestamp": "03:30", "text": "That's reasonable. Let's get the core directory humming first. Our target delivery date for Phase 1 is 4 weeks from kickoff." },
+    { "speaker": "Alex Mercer", "timestamp": "03:42", "text": "Perfect. We'll run feasibility checks on your requirements against the BD documentation, build a detailed task breakdown with hour estimates, and share the proposal for your review." }
+  ]
+}
