@@ -1,0 +1,658 @@
+{
+  "timestamp": "2026-10-20T13:51:54Z",
+  "total_test_cases": 60,
+  "overall_passed": 53,
+  "task1": [
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-01",
+      "query": "Can I send a mass email campaign to all my me...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.92,
+      "latency_ms": 5.1,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-02",
+      "query": "How do I import categories using a CSV file?...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 4.4,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-03",
+      "query": "Where do I configure social media links in th...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 4.9,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-04",
+      "query": "Can I set up email forwarders inside Brillian...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 4.4,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-05",
+      "query": "How do email accounts and webmail work in Bri...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 4.5,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-06",
+      "query": "How do I cancel payment subscriptions or orde...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 4.2,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-07",
+      "query": "Where to get help and customer support for Br...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 4.9,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-08",
+      "query": "Can I host a WordPress site on Brilliant Dire...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.88,
+      "latency_ms": 4.4,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-09",
+      "query": "What are the mandatory fields required for me...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 5.0,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-10",
+      "query": "How does predictive keyword search work?...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.98,
+      "latency_ms": 4.5,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-11",
+      "query": "How to edit and override default CSS styleshe...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.94,
+      "latency_ms": 5.0,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-12",
+      "query": "Where is the Sidebar Manager located in the T...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 4.7,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-13",
+      "query": "What does each support ticket status mean?...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.93,
+      "latency_ms": 4.2,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-14",
+      "query": "How do upgrades and downgrades work from a me...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 5.0,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-15",
+      "query": "How do search result ordering and distance so...",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 6.9,
+      "est_cost_usd": 0.0028,
+      "passed": true
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-16",
+      "query": "How do I bake sourdough bread from scratch wi...",
+      "expected_status": "insufficient_evidence",
+      "actual_status": "answered",
+      "confidence": 0.89,
+      "latency_ms": 4.8,
+      "est_cost_usd": 0.0028,
+      "passed": false
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-17",
+      "query": "What is the quantum computing algorithm for S...",
+      "expected_status": "insufficient_evidence",
+      "actual_status": "answered",
+      "confidence": 0.95,
+      "latency_ms": 4.8,
+      "est_cost_usd": 0.0028,
+      "passed": false
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-18",
+      "query": "How do I replace a 2012 Honda Civic transmiss...",
+      "expected_status": "insufficient_evidence",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 4.4,
+      "est_cost_usd": 0.0028,
+      "passed": false
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-19",
+      "query": "Explain the rules of cricket and the Duckwort...",
+      "expected_status": "insufficient_evidence",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 4.7,
+      "est_cost_usd": 0.0028,
+      "passed": false
+    },
+    {
+      "task": "Task 1: Knowledge Brain",
+      "case_id": "KB-20",
+      "query": "What is the capital city of Australia and its...",
+      "expected_status": "insufficient_evidence",
+      "actual_status": "answered",
+      "confidence": 0.49,
+      "latency_ms": 4.5,
+      "est_cost_usd": 0.0028,
+      "passed": false
+    }
+  ],
+  "task2": [
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-001",
+      "subject": "How to connect our custom domain name?...",
+      "expected_category": "HOW_TO",
+      "actual_category": "HOW_TO",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-002",
+      "subject": "Can we send a monthly newsletter to our ...",
+      "expected_category": "HOW_TO",
+      "actual_category": "HOW_TO",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-003",
+      "subject": "How to configure Stripe for member subsc...",
+      "expected_category": "HOW_TO",
+      "actual_category": "HOW_TO",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-004",
+      "subject": "Importing 1,200 categories via CSV - for...",
+      "expected_category": "HOW_TO",
+      "actual_category": "HOW_TO",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-005",
+      "subject": "Setting up social media links in the hea...",
+      "expected_category": "HOW_TO",
+      "actual_category": "HOW_TO",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-006",
+      "subject": "How to configure location radius search ...",
+      "expected_category": "HOW_TO",
+      "actual_category": "HOW_TO",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-007",
+      "subject": "How to create free vs premium membership...",
+      "expected_category": "HOW_TO",
+      "actual_category": "HOW_TO",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-008",
+      "subject": "Setting up Google Maps API Keys for memb...",
+      "expected_category": "HOW_TO",
+      "actual_category": "HOW_TO",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-009",
+      "subject": "Can I set up email forwarders for suppor...",
+      "expected_category": "HOW_TO",
+      "actual_category": "HOW_TO",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-010",
+      "subject": "How does automatic lead matching work?...",
+      "expected_category": "HOW_TO",
+      "actual_category": "QUOTE_REQUEST",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": false
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-011",
+      "subject": "Changing font styles and primary brand c...",
+      "expected_category": "HOW_TO",
+      "actual_category": "HOW_TO",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-012",
+      "subject": "How do members cancel their recurring su...",
+      "expected_category": "HOW_TO",
+      "actual_category": "HOW_TO",
+      "risk": "SAFE",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-013",
+      "subject": "URGENT: Stripe checkout returning Error ...",
+      "expected_category": "TROUBLESHOOTING",
+      "actual_category": "TROUBLESHOOTING",
+      "risk": "MEDIUM",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-014",
+      "subject": "Member search results showing blank page...",
+      "expected_category": "TROUBLESHOOTING",
+      "actual_category": "TROUBLESHOOTING",
+      "risk": "MEDIUM",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-015",
+      "subject": "Google Map showing grey watermark error ...",
+      "expected_category": "TROUBLESHOOTING",
+      "actual_category": "TROUBLESHOOTING",
+      "risk": "MEDIUM",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-016",
+      "subject": "Welcome emails going straight to spam fo...",
+      "expected_category": "TROUBLESHOOTING",
+      "actual_category": "TROUBLESHOOTING",
+      "risk": "MEDIUM",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-017",
+      "subject": "CSV upload failed with error: 'Column he...",
+      "expected_category": "TROUBLESHOOTING",
+      "actual_category": "TROUBLESHOOTING",
+      "risk": "MEDIUM",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-018",
+      "subject": "SSL Certificate expired warning showing ...",
+      "expected_category": "TROUBLESHOOTING",
+      "actual_category": "TROUBLESHOOTING",
+      "risk": "HIGH",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-019",
+      "subject": "Member profile photo upload getting stuc...",
+      "expected_category": "TROUBLESHOOTING",
+      "actual_category": "TROUBLESHOOTING",
+      "risk": "MEDIUM",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": true
+    },
+    {
+      "task": "Task 2: Inbox Agent",
+      "case_id": "EM-020",
+      "subject": "Lead notifications not forwarding to tut...",
+      "expected_category": "TROUBLESHOOTING",
+      "actual_category": "HOW_TO",
+      "risk": "MEDIUM",
+      "latency_ms": 11.2,
+      "est_cost_usd": 0.0006,
+      "passed": false
+    }
+  ],
+  "task3": [
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-01",
+      "description": "Extract & Verify REQ-001 (Location Radius Search)",
+      "expected": "CONFIRMED",
+      "actual": "CONFIRMED",
+      "latency_ms": 17.5,
+      "est_cost_usd": 0.0042,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-02",
+      "description": "Extract & Verify REQ-002 (Structured Category Hierarchy)",
+      "expected": "CONFIRMED",
+      "actual": "CONFIRMED",
+      "latency_ms": 17.5,
+      "est_cost_usd": 0.0042,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-03",
+      "description": "Extract & Verify REQ-003 (Verified Member Badge Overlay)",
+      "expected": "CONFIRMED",
+      "actual": "CONFIRMED",
+      "latency_ms": 17.5,
+      "est_cost_usd": 0.0042,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-04",
+      "description": "Extract & Verify REQ-004 (Mobile Header & Search UX Optimization)",
+      "expected": "CONFIRMED",
+      "actual": "CONFIRMED",
+      "latency_ms": 17.5,
+      "est_cost_usd": 0.0042,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-05",
+      "description": "E-comm Feasibility: REQ-101 (Stripe 3D Secure Payment Integration)",
+      "expected": "FEASIBLE",
+      "actual": "FEASIBLE",
+      "latency_ms": 18.0,
+      "est_cost_usd": 0.0039,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-06",
+      "description": "E-comm Feasibility: REQ-102 (Membership Plan Configuration)",
+      "expected": "FEASIBLE",
+      "actual": "FEASIBLE",
+      "latency_ms": 18.0,
+      "est_cost_usd": 0.0039,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-07",
+      "description": "E-comm Feasibility: REQ-103 (Automated PDF Tax Invoicing)",
+      "expected": "FEASIBLE",
+      "actual": "FEASIBLE",
+      "latency_ms": 18.0,
+      "est_cost_usd": 0.0039,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-08",
+      "description": "E-comm Feasibility: REQ-104 (Member Self-Service Cancellation)",
+      "expected": "FEASIBLE",
+      "actual": "FEASIBLE",
+      "latency_ms": 18.0,
+      "est_cost_usd": 0.0039,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-09",
+      "description": "Revised Scope Extraction: REQ-001 (Location Radius Search (Miles & Kilometers))",
+      "expected": "CONFIRMED",
+      "actual": "CONFIRMED",
+      "latency_ms": 16.8,
+      "est_cost_usd": 0.0037,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-10",
+      "description": "Revised Scope Extraction: REQ-002 (Structured Category Hierarchy)",
+      "expected": "CONFIRMED",
+      "actual": "CONFIRMED",
+      "latency_ms": 16.8,
+      "est_cost_usd": 0.0037,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-11",
+      "description": "Revised Scope Extraction: REQ-004 (Mobile Header & Search UX Optimization)",
+      "expected": "CONFIRMED",
+      "actual": "CONFIRMED",
+      "latency_ms": 16.8,
+      "est_cost_usd": 0.0037,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-12",
+      "description": "Revised Scope Extraction: REQ-006 (Multi-Category Bulk CSV Member Import)",
+      "expected": "CONFIRMED",
+      "actual": "CONFIRMED",
+      "latency_ms": 16.8,
+      "est_cost_usd": 0.0037,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-13",
+      "description": "Validate 3-Point PERT Calculation Formula",
+      "expected": "FORMULA_MATCH",
+      "actual": "FORMULA_MATCH",
+      "latency_ms": 5.2,
+      "est_cost_usd": 0.001,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-14",
+      "description": "Validate OOTB Hours Savings Calculation",
+      "expected": "HOURS_SAVED_POSITIVE",
+      "actual": "HOURS_SAVED_POSITIVE",
+      "latency_ms": 4.8,
+      "est_cost_usd": 0.001,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-15",
+      "description": "Detect Modified REQ-001 (Miles & KM)",
+      "expected": "DETECTED_AND_ENFORCED",
+      "actual": "DETECTED_AND_ENFORCED",
+      "latency_ms": 12.3,
+      "est_cost_usd": 0.0035,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-16",
+      "description": "Detect Removed REQ-003 (Badge overlay)",
+      "expected": "DETECTED_AND_ENFORCED",
+      "actual": "DETECTED_AND_ENFORCED",
+      "latency_ms": 12.3,
+      "est_cost_usd": 0.0035,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-17",
+      "description": "Detect Added REQ-006 (Multi-category CSV)",
+      "expected": "DETECTED_AND_ENFORCED",
+      "actual": "DETECTED_AND_ENFORCED",
+      "latency_ms": 12.3,
+      "est_cost_usd": 0.0035,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-18",
+      "description": "Detect Out-of-Scope Creep (Salesforce CRM)",
+      "expected": "DETECTED_AND_ENFORCED",
+      "actual": "DETECTED_AND_ENFORCED",
+      "latency_ms": 12.3,
+      "est_cost_usd": 0.0035,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-19",
+      "description": "Enforce Human Approval Gate",
+      "expected": "DETECTED_AND_ENFORCED",
+      "actual": "DETECTED_AND_ENFORCED",
+      "latency_ms": 12.3,
+      "est_cost_usd": 0.0035,
+      "passed": true
+    },
+    {
+      "task": "Task 3: Meeting-to-Scope",
+      "case_id": "SC-20",
+      "description": "Calculate Delta Hours Correctly",
+      "expected": "DETECTED_AND_ENFORCED",
+      "actual": "DETECTED_AND_ENFORCED",
+      "latency_ms": 12.3,
+      "est_cost_usd": 0.0035,
+      "passed": true
+    }
+  ],
+  "summary": {
+    "task1_accuracy": "75.0%",
+    "task2_accuracy": "90.0%",
+    "task3_accuracy": "100.0%",
+    "avg_latency_ms": 10.2,
+    "avg_cost_usd": 0.0023
+  }
+}
