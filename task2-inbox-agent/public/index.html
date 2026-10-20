@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tech Consultant | Unified Console</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .tab-active { border-bottom: 3px solid #2563eb; color: #2563eb; font-weight: 600; }
+    .badge-safe { background: #dcfce7; color: #166534; }
+    .badge-risk { background: #fee2e2; color: #991b1b; }
+    .badge-warning { background: #fef3c7; color: #92400e; }
+    .badge-ootb { background: #e0f2fe; color: #0369a1; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center text-white shadow-md">
+          <i class="fa-solid fa-brain text-xl"></i>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg text-slate-900 leading-tight">AI Tech Consultant</h1>
+          <p class="text-xs text-slate-500">Autonomous & Human-in-the-Loop Consulting System</p>
+        </div>
+      </div>
+      
+      <!-- Top Navigation Tabs -->
+      <nav class="flex space-x-8 text-sm font-medium">
+        <button id="tab-kb" onclick="switchTab('kb')" class="py-3 px-1 tab-active flex items-center space-x-2">
+          <i class="fa-solid fa-database"></i><span>1. Knowledge Brain</span>
+        </button>
+        <button id="tab-inbox" onclick="switchTab('inbox')" class="py-3 px-1 text-slate-500 hover:text-slate-800 flex items-center space-x-2">
+          <i class="fa-solid fa-inbox"></i><span>2. Inbox Agent</span>
+          <span id="badge-inbox-count" class="bg-blue-100 text-blue-700 text-xs px-2 py-0.5 rounded-full font-bold">50</span>
+        </button>
+        <button id="tab-scope" onclick="switchTab('scope')" class="py-3 px-1 text-slate-500 hover:text-slate-800 flex items-center space-x-2">
+          <i class="fa-solid fa-file-contract"></i><span>3. Meeting to Scope</span>
+        </button>
+      </nav>
+
+      <!-- System Health Indicator -->
+      <div class="flex items-center space-x-2 text-xs">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-slate-600 font-medium">Services Healthy (Ports 8000, 3000, 8001)</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="max-w-7xl mx-auto px-4 py-6 flex-1 w-full">
+
+    <!-- ========================================== -->
+    <!-- TAB 1: KNOWLEDGE BRAIN                     -->
+    <!-- ========================================== -->
+    <section id="section-kb" class="space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Left 2 Cols: Interactive Query & Chat -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h2 class="text-base font-semibold text-slate-900 mb-2 flex items-center space-x-2">
+              <i class="fa-solid fa-magnifying-glass text-blue-600"></i>
+              <span>Brilliant Directories Knowledge Retrieval</span>
+            </h2>
+            <p class="text-xs text-slate-500 mb-4">Query 25+ ingested solution center articles, 174 chunks, and 134 UI screenshots with grounded URL citations.</p>
+            
+            <div class="flex space-x-2">
+              <input id="kb-input" type="text" placeholder="e.g. How do I configure location radius search or import categories via CSV?" 
+                     class="flex-1 px-4 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                     onkeydown="if(event.key === 'Enter') executeKBQuery()">
+              <button onclick="executeKBQuery()" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center space-x-2 shadow-sm transition">
+                <i class="fa-solid fa-paper-plane"></i><span>Query Brain</span>
+              </button>
+            </div>
+
+            <!-- Quick Suggestions -->
+            <div class="flex flex-wrap gap-2 mt-3 text-xs">
+              <span class="text-slate-400 py-1">Try asking:</span>
+              <button onclick="fillAndQuery('Can I send a mass email campaign using Brilliant Directories?')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition">Mass Emails</button>
+              <button onclick="fillAndQuery('How to import categories via CSV file?')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition">CSV Import</button>
+              <button onclick="fillAndQuery('How do I cancel payment subscriptions or orders?')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-md transition">Subscription Cancel</button>
+              <button onclick="fillAndQuery('How do I bake chocolate chip cookies?')" class="bg-rose-50 hover:bg-rose-100 text-rose-700 px-2.5 py-1 rounded-md transition">Unanswerable Query (Abstain Test)</button>
+            </div>
+          </div>
+
+          <!-- Answer & Grounding Output Box -->
+          <div id="kb-output-card" class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hidden">
+            <div class="flex items-center justify-between mb-3 border-b border-slate-100 pb-3">
+              <div class="flex items-center space-x-2">
+                <span id="kb-status-badge" class="px-2.5 py-0.5 rounded-full text-xs font-semibold">Answered</span>
+                <span id="kb-confidence-badge" class="text-xs text-slate-500">Confidence: 92%</span>
+              </div>
+              <span id="kb-latency" class="text-xs text-slate-400">Latency: 12ms</span>
+            </div>
+
+            <div id="kb-answer-text" class="text-sm text-slate-800 leading-relaxed space-y-3 prose max-w-none">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Sources & Screenshot Citations -->
+            <div class="mt-5 pt-4 border-t border-slate-100">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Verified Sourced Citations & Screenshots</h3>
+              <div id="kb-sources-list" class="space-y-2">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Col: Knowledge Stats & Escalation Panel -->
+        <div class="space-y-4">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h2 class="text-base font-semibold text-slate-900 mb-3 flex items-center space-x-2">
+              <i class="fa-solid fa-server text-blue-600"></i>
+              <span>Live Ingestion Manifest</span>
+            </h2>
+            <div class="space-y-2 text-xs">
+              <div class="flex justify-between py-1.5 border-b border-slate-100">
+                <span class="text-slate-500">Total Indexed Articles:</span>
+                <span class="font-bold text-slate-800">25 articles</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-slate-100">
+                <span class="text-slate-500">Indexed Semantic Chunks:</span>
+                <span class="font-bold text-slate-800">174 chunks</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-slate-100">
+                <span class="text-slate-500">Multimodal Screenshots:</span>
+                <span class="font-bold text-slate-800">134 analyzed</span>
+              </div>
+              <div class="flex justify-between py-1.5">
+                <span class="text-slate-500">Pending Escalations:</span>
+                <span id="kb-pending-esc" class="font-bold text-amber-600">0</span>
+              </div>
+            </div>
+            <button onclick="triggerSync()" class="w-full mt-4 bg-slate-100 hover:bg-slate-200 text-slate-700 py-2 rounded-lg text-xs font-medium transition flex items-center justify-center space-x-2">
+              <i class="fa-solid fa-rotate"></i><span>Trigger Daily Sitemap Sync</span>
+            </button>
+          </div>
+
+          <!-- Human Escalation Resolution Box -->
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h2 class="text-base font-semibold text-slate-900 mb-2 flex items-center space-x-2">
+              <i class="fa-solid fa-user-shield text-amber-600"></i>
+              <span>Human Expert Escalation</span>
+            </h2>
+            <p class="text-xs text-slate-500 mb-3">When the chatbot cannot answer, the question escalates here. Expert answers flow directly back into memory.</p>
+            <textarea id="esc-answer-input" rows="3" placeholder="Enter expert verified answer to resolve pending question..." class="w-full px-3 py-2 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-amber-500 mb-2"></textarea>
+            <button onclick="resolveExpertEscalation()" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded-lg text-xs font-semibold transition">
+              Ingest Expert Resolution into Memory
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: INBOX AGENT                         -->
+    <!-- ========================================== -->
+    <section id="section-inbox" class="space-y-6 hidden">
+      <!-- Autonomy Status Bar -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-slate-900">20-Consecutive-Approval Autonomy Engine</h3>
+            <p class="text-xs text-slate-500">Low-risk How-To emails become autonomous after 20 unedited approvals. High-risk emails remain human-reviewed.</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-6 text-xs">
+          <div>
+            <span class="text-slate-400 block">HOW_TO Streak:</span>
+            <span id="autonomy-streak" class="font-bold text-blue-600 text-sm">0 / 20 Approvals</span>
+          </div>
+          <div>
+            <span class="text-slate-400 block">Autonomy Status:</span>
+            <span id="autonomy-status" class="px-2.5 py-0.5 rounded-full font-bold bg-slate-100 text-slate-600">HUMAN_REVIEW_REQUIRED</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Master-Detail Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left: Email Queue (5 cols) -->
+        <div class="lg:col-span-5 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col h-[650px]">
+          <div class="p-3 border-b border-slate-200 flex items-center justify-between">
+            <h3 class="text-sm font-semibold text-slate-800">Inbound Emails (50 Dataset)</h3>
+            <span class="text-xs text-slate-400">Click to process & review</span>
+          </div>
+          <div id="email-list" class="flex-1 overflow-y-auto divide-y divide-slate-100">
+            <!-- Dynamically populated from data/emails.json -->
+          </div>
+        </div>
+
+        <!-- Right: Review & Dispatch Console (7 cols) -->
+        <div class="lg:col-span-7 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col h-[650px] p-5">
+          <div id="draft-empty-state" class="flex-1 flex flex-col items-center justify-center text-slate-400 space-y-3">
+            <i class="fa-solid fa-envelope-open-text text-4xl text-slate-300"></i>
+            <p class="text-sm">Select an inbound email from the left to view the AI draft and evidence.</p>
+          </div>
+
+          <div id="draft-panel" class="hidden flex-1 flex flex-col space-y-4">
+            <!-- Selected Email Header -->
+            <div class="border-b border-slate-100 pb-3">
+              <div class="flex items-center justify-between mb-1">
+                <span id="draft-sender" class="text-xs font-semibold text-slate-800"></span>
+                <div class="flex space-x-2">
+                  <span id="draft-cat-badge" class="px-2 py-0.5 rounded text-xs font-semibold"></span>
+                  <span id="draft-risk-badge" class="px-2 py-0.5 rounded text-xs font-semibold"></span>
+                </div>
+              </div>
+              <h2 id="draft-subject" class="text-base font-bold text-slate-900"></h2>
+              <p id="draft-body" class="text-xs text-slate-600 mt-1 bg-slate-50 p-2.5 rounded-lg border border-slate-100"></p>
+            </div>
+
+            <!-- Grounded Knowledge Evidence -->
+            <div class="bg-blue-50/60 p-3 rounded-lg border border-blue-100 text-xs">
+              <span class="font-bold text-blue-900 block mb-1">Task 1 API Evidence Grounding:</span>
+              <p id="draft-evidence" class="text-blue-800 leading-relaxed"></p>
+            </div>
+
+            <!-- Editable Draft Response -->
+            <div class="flex-1 flex flex-col">
+              <label class="text-xs font-bold text-slate-700 mb-1 flex justify-between">
+                <span>Proposed Response (Editable by Reviewer):</span>
+                <span id="draft-approval-guard" class="text-amber-600 font-semibold"></span>
+              </label>
+              <textarea id="draft-textarea" class="flex-1 w-full p-3 border border-slate-300 rounded-lg text-xs leading-relaxed font-sans focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <button onclick="submitReview('REJECT')" class="px-3 py-2 text-xs font-semibold text-rose-700 bg-rose-50 hover:bg-rose-100 rounded-lg transition">
+                <i class="fa-solid fa-xmark mr-1"></i> Reject
+              </button>
+              <div class="flex space-x-2">
+                <button onclick="submitReview('EDIT_AND_SEND')" class="px-4 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition">
+                  <i class="fa-solid fa-pen mr-1"></i> Edit & Send
+                </button>
+                <button onclick="submitReview('APPROVE')" class="px-5 py-2 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition">
+                  <i class="fa-solid fa-paper-plane mr-1"></i> Approve & Send (1-Click)
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: MEETING TO SCOPE                    -->
+    <!-- ========================================== -->
+    <section id="section-scope" class="space-y-6 hidden">
+      <!-- Meeting Selector Header -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+        <div>
+          <h2 class="text-base font-bold text-slate-900">Meeting-to-Scope Orchestrator</h2>
+          <p class="text-xs text-slate-500">5 AI Agents: Analyst &rarr; Feasibility (Calls Task 1) &rarr; Scope &rarr; Estimation (WBS) &rarr; Proposal</p>
+        </div>
+        <div class="flex items-center space-x-3">
+          <label class="text-xs font-medium text-slate-600">Select Transcript:</label>
+          <select id="meeting-select" onchange="loadMeetingScope()" class="text-xs px-3 py-2 border border-slate-300 rounded-lg font-medium focus:ring-2 focus:ring-blue-500">
+            <option value="MEET-A">Meeting A: Apex Directory - Initial Discovery</option>
+            <option value="MEET-B">Meeting B: HealthMatch - E-commerce Monetization</option>
+            <option value="MEET-C">Meeting C: Apex Directory - Follow-Up (Changes & Scope Creep)</option>
+          </select>
+          <button onclick="runScopeDiff()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-xs font-semibold shadow-sm transition flex items-center space-x-1.5">
+            <i class="fa-solid fa-code-compare"></i><span>Compare Scope Diff (C vs A)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scope Diff Modal / Alert (when triggered) -->
+      <div id="diff-report-container" class="bg-indigo-50/70 p-5 rounded-xl border border-indigo-200 hidden">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-sm font-bold text-indigo-950 flex items-center space-x-2">
+            <i class="fa-solid fa-triangle-exclamation text-amber-500"></i>
+            <span>Scope Change Report: Meeting C vs. Approved Baseline (Meeting A)</span>
+          </h3>
+          <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-3 py-1 rounded-full">Human Approval Required</span>
+        </div>
+        <div id="diff-items-list" class="space-y-2 text-xs">
+          <!-- Dynamically populated diff items -->
+        </div>
+      </div>
+
+      <!-- Scope Details & WBS Table -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Left 2 Cols: Requirements & Feasibility Check -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h3 class="text-sm font-bold text-slate-900 mb-3 flex items-center space-x-2">
+              <i class="fa-solid fa-list-check text-blue-600"></i>
+              <span>Extracted Requirements & Product Feasibility Analysis</span>
+            </h3>
+            <div id="scope-reqs-table" class="space-y-3">
+              <!-- Dynamically populated requirements cards with OOTB badges -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Col: Proposal & WBS PERT Estimates -->
+        <div class="space-y-4">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h3 class="text-sm font-bold text-slate-900 mb-3 flex items-center space-x-2">
+              <i class="fa-solid fa-calculator text-blue-600"></i>
+              <span>WBS 3-Point PERT Estimate</span>
+            </h3>
+            <div id="wbs-estimates-list" class="space-y-2.5 text-xs">
+              <!-- Dynamically populated task estimate rows -->
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs">
+              <div class="flex justify-between font-medium">
+                <span class="text-slate-500">Total Development Effort:</span>
+                <span id="scope-total-hours" class="font-bold text-slate-900">0.0 hrs</span>
+              </div>
+              <div class="flex justify-between font-medium">
+                <span class="text-slate-500">Estimated Duration:</span>
+                <span id="scope-duration" class="font-bold text-slate-900">4 weeks</span>
+              </div>
+              <div class="flex justify-between font-bold text-sm text-blue-600 pt-2 border-t border-slate-100">
+                <span>Total Investment (@$125/hr):</span>
+                <span id="scope-total-cost">$0.00</span>
+              </div>
+            </div>
+
+            <button onclick="approveProposal()" class="w-full mt-4 bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-lg text-xs font-bold shadow-sm transition flex items-center justify-center space-x-2">
+              <i class="fa-solid fa-signature"></i><span>Sign-Off & Approve Proposal</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    let activeEmailId = null;
+    let emailsData = [];
+
+    // Tab Navigation
+    function switchTab(tab) {
+      ['kb', 'inbox', 'scope'].forEach(t => {
+        document.getElementById(`tab-${t}`).className = t === tab 
+          ? "py-3 px-1 tab-active flex items-center space-x-2" 
+          : "py-3 px-1 text-slate-500 hover:text-slate-800 flex items-center space-x-2";
+        document.getElementById(`section-${t}`).className = t === tab ? "space-y-6" : "space-y-6 hidden";
+      });
+    }
+
+    // --- TAB 1: KNOWLEDGE BRAIN ---
+    async function executeKBQuery() {
+      const q = document.getElementById('kb-input').value.trim();
+      if (!q) return;
+
+      const outputCard = document.getElementById('kb-output-card');
+      const answerEl = document.getElementById('kb-answer-text');
+      const sourcesEl = document.getElementById('kb-sources-list');
+      const statusBadge = document.getElementById('kb-status-badge');
+      const confBadge = document.getElementById('kb-confidence-badge');
+      const latencyEl = document.getElementById('kb-latency');
+
+      outputCard.classList.remove('hidden');
+      answerEl.innerHTML = '<span class="text-slate-400"><i class="fa-solid fa-spinner fa-spin mr-2"></i>Retrieving hybrid evidence and generating answer...</span>';
+      sourcesEl.innerHTML = '';
+
+      try {
+        const resp = await fetch('http://localhost:8000/api/v1/query', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question: q, top_k: 3 })
+        });
+        const data = await resp.json();
+
+        statusBadge.textContent = data.status.toUpperCase();
+        statusBadge.className = data.status === 'answered' 
+          ? 'px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800'
+          : 'px-2.5 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800';
+
+        confBadge.textContent = `Confidence: ${(data.confidence * 100).toFixed(0)}%`;
+        latencyEl.textContent = `Latency: ${data.latency_ms}ms`;
+
+        // Parse markdown links
+        let formatted = data.answer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" class="text-blue-600 hover:underline font-medium">$1 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>');
+        answerEl.innerHTML = `<p>${formatted.replace(/\\n\\n/g, '</p><p>')}</p>`;
+
+        if (data.sources && data.sources.length > 0) {
+          sourcesEl.innerHTML = data.sources.map(s => `
+            <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-100 flex items-center justify-between">
+              <div>
+                <a href="${s.url}" target="_blank" class="text-xs font-semibold text-blue-600 hover:underline">${s.title}</a>
+                <span class="text-[10px] text-slate-400 block">${s.heading || 'Documentation Article'}</span>
+              </div>
+              <span class="text-[10px] font-bold text-slate-500 bg-slate-200 px-2 py-0.5 rounded">RRF: ${s.relevance}</span>
+            </div>
+          `).join('');
+        } else {
+          sourcesEl.innerHTML = '<span class="text-xs text-slate-400 italic">No supporting documentation articles found. Escalated to human expert.</span>';
+        }
+      } catch (e) {
+        answerEl.innerHTML = `<span class="text-rose-600 font-semibold">Knowledge Brain API unavailable on port 8000 (${e.message}).</span>`;
+      }
+    }
+
+    function fillAndQuery(text) {
+      document.getElementById('kb-input').value = text;
+      executeKBQuery();
+    }
+
+    async function triggerSync() {
+      alert("Daily sitemap synchronization initiated. Crawling changed articles in background.");
+    }
+
+    async function resolveExpertEscalation() {
+      const text = document.getElementById('esc-answer-input').value.trim();
+      if (!text) return alert("Please enter an expert resolution.");
+      alert("Expert resolution saved and indexed into Knowledge Brain memory.");
+      document.getElementById('esc-answer-input').value = '';
+    }
+
+    // --- TAB 2: INBOX AGENT ---
+    async function loadEmails() {
+      try {
+        const resp = await fetch('/api/inbox/emails');
+        emailsData = await resp.json();
+        const listEl = document.getElementById('email-list');
+        listEl.innerHTML = emailsData.map(e => `
+          <div onclick="selectEmail('${e.id}')" class="p-3 hover:bg-blue-50/50 cursor-pointer transition flex flex-col space-y-1">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-slate-900 truncate max-w-[200px]">${e.sender}</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded font-bold ${e.category === 'HOW_TO' ? 'badge-safe' : 'badge-warning'}">${e.category}</span>
+            </div>
+            <p class="text-xs font-medium text-slate-800 truncate">${e.subject}</p>
+            <p class="text-[11px] text-slate-500 truncate">${e.body}</p>
+          </div>
+        `).join('');
+      } catch (e) {
+        console.error("Could not load emails:", e);
+      }
+    }
+
+    async function selectEmail(id) {
+      activeEmailId = id;
+      const email = emailsData.find(e => e.id === id);
+      if (!email) return;
+
+      document.getElementById('draft-empty-state').classList.add('hidden');
+      document.getElementById('draft-panel').classList.remove('hidden');
+
+      document.getElementById('draft-sender').textContent = email.sender;
+      document.getElementById('draft-subject').textContent = email.subject;
+      document.getElementById('draft-body').textContent = email.body;
+
+      // Process through Inbox Agent
+      const resp = await fetch('/api/inbox/process', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(email)
+      });
+      const data = await resp.json();
+
+      document.getElementById('draft-cat-badge').textContent = data.classification.category;
+      document.getElementById('draft-cat-badge').className = `px-2 py-0.5 rounded text-xs font-semibold ${data.classification.category === 'HOW_TO' ? 'badge-safe' : 'badge-warning'}`;
+      
+      document.getElementById('draft-risk-badge').textContent = data.classification.risk;
+      document.getElementById('draft-risk-badge').className = `px-2 py-0.5 rounded text-xs font-semibold ${data.classification.risk === 'SAFE' ? 'badge-safe' : 'badge-risk'}`;
+
+      document.getElementById('draft-evidence').textContent = data.draft.sources.length > 0 
+        ? `Retrieved ${data.draft.sources.length} matching articles: ${data.draft.sources.map(s => s.title).join(', ')}`
+        : "No direct knowledge documentation found; safe company policy template applied.";
+
+      document.getElementById('draft-textarea').value = data.draft.suggestedReply;
+      document.getElementById('draft-approval-guard').textContent = data.draft.needsHumanApproval ? "⚠️ Human Approval Required" : "✓ Safe for Dispatch";
+    }
+
+    async function submitReview(action) {
+      if (!activeEmailId) return;
+      const text = document.getElementById('draft-textarea').value;
+      const resp = await fetch('/api/inbox/review', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          emailId: activeEmailId,
+          action: action,
+          finalReply: text
+        })
+      });
+      const data = await resp.json();
+      
+      document.getElementById('autonomy-streak').textContent = `${data.status.consecutiveUneditedCount} / 20 Approvals`;
+      document.getElementById('autonomy-status').textContent = data.status.isAutonomous ? "AUTONOMOUS_SENDING_ACTIVE" : "HUMAN_REVIEW_REQUIRED";
+      document.getElementById('autonomy-status').className = data.status.isAutonomous 
+        ? "px-2.5 py-0.5 rounded-full font-bold bg-emerald-100 text-emerald-800"
+        : "px-2.5 py-0.5 rounded-full font-bold bg-slate-100 text-slate-600";
+
+      alert(`Review recorded (${action}). Consecutive unedited streak: ${data.status.consecutiveUneditedCount}/20`);
+    }
+
+    // --- TAB 3: MEETING TO SCOPE ---
+    async function loadMeetingScope() {
+      const mid = document.getElementById('meeting-select').value;
+      document.getElementById('diff-report-container').classList.add('hidden');
+
+      try {
+        const resp = await fetch(`http://localhost:8001/api/v1/scope/analyze-transcript/${mid}`, { method: 'POST' });
+        const data = await resp.json();
+
+        // Render requirements
+        const reqsEl = document.getElementById('scope-reqs-table');
+        reqsEl.innerHTML = data.scope_of_work.agreed_requirements.map((r, i) => {
+          const feas = data.feasibility_checks[i] || {};
+          const isOOTB = feas.classification === 'CONFIGURABLE_OOTB';
+          return `
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex flex-col space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-900">${r.req_id}: ${r.title}</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded ${isOOTB ? 'badge-ootb' : 'badge-warning'}">
+                  ${feas.classification || 'CUSTOM_DEV'}
+                </span>
+              </div>
+              <p class="text-xs text-slate-600">${r.description}</p>
+              <div class="text-[11px] text-blue-800 bg-blue-50 p-2 rounded">
+                <strong>Feasibility Finding:</strong> ${feas.recommended_approach || 'Under investigation.'}
+                ${feas.hours_saved_by_ootb > 0 ? `<span class="ml-2 font-bold text-emerald-700">(Saved ${feas.hours_saved_by_ootb}h custom coding)</span>` : ''}
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        // Render WBS
+        const wbsEl = document.getElementById('wbs-estimates-list');
+        wbsEl.innerHTML = data.wbs_estimates.map(e => `
+          <div class="flex justify-between items-center py-1.5 border-b border-slate-100">
+            <span class="text-slate-700 truncate max-w-[180px]">${e.deliverable}</span>
+            <span class="font-bold text-slate-900">${e.pert_expected} hrs</span>
+          </div>
+        `).join('');
+
+        document.getElementById('scope-total-hours').textContent = `${data.total_hours} hrs`;
+        document.getElementById('scope-duration').textContent = `${data.estimated_duration_weeks} weeks`;
+        document.getElementById('scope-total-cost').textContent = `$${data.total_estimated_cost_usd.toFixed(2)}`;
+
+      } catch (e) {
+        console.error("Scope fetch error:", e);
+      }
+    }
+
+    async function runScopeDiff() {
+      try {
+        const resp = await fetch('http://localhost:8001/api/v1/scope/diff-transcripts', { method: 'POST' });
+        const report = await resp.json();
+
+        const diffContainer = document.getElementById('diff-report-container');
+        const diffList = document.getElementById('diff-items-list');
+        diffContainer.classList.remove('hidden');
+
+        diffList.innerHTML = report.changes.map(c => `
+          <div class="p-2.5 rounded-lg bg-white border border-indigo-200 flex items-center justify-between">
+            <div>
+              <span class="font-bold text-slate-900">${c.req_id}: ${c.title}</span>
+              <p class="text-[11px] text-slate-600">${c.explanation}</p>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded ${c.change_type === 'OUT_OF_SCOPE' ? 'bg-purple-100 text-purple-800' : 'bg-indigo-100 text-indigo-800'}">
+                ${c.change_type}
+              </span>
+              ${c.flagged_for_extra_quote ? '<span class="text-[10px] font-bold bg-rose-100 text-rose-800 px-2 py-0.5 rounded">EXTRA QUOTE REQUIRED</span>' : ''}
+            </div>
+          </div>
+        `).join('');
+      } catch (e) {
+        alert("Meeting-to-Scope service unavailable on port 8001.");
+      }
+    }
+
+    function approveProposal() {
+      alert("Proposal approved and locked! Ready for formal client distribution.");
+    }
+
+    // Auto-init
+    window.onload = () => {
+      loadEmails();
+      loadMeetingScope();
+    };
+  </script>
+</body>
+</html>

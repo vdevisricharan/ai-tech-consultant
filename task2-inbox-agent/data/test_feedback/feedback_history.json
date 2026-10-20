@@ -1,0 +1,252 @@
+[
+  {
+    "emailId": "REF-1",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.740Z"
+  },
+  {
+    "emailId": "REF-2",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.740Z"
+  },
+  {
+    "emailId": "REF-3",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.743Z"
+  },
+  {
+    "emailId": "REF-4",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.745Z"
+  },
+  {
+    "emailId": "REF-5",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.747Z"
+  },
+  {
+    "emailId": "REF-6",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.750Z"
+  },
+  {
+    "emailId": "REF-7",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.752Z"
+  },
+  {
+    "emailId": "REF-8",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.754Z"
+  },
+  {
+    "emailId": "REF-9",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.757Z"
+  },
+  {
+    "emailId": "REF-10",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.759Z"
+  },
+  {
+    "emailId": "REF-11",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.761Z"
+  },
+  {
+    "emailId": "REF-12",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.764Z"
+  },
+  {
+    "emailId": "REF-13",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.766Z"
+  },
+  {
+    "emailId": "REF-14",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.769Z"
+  },
+  {
+    "emailId": "REF-15",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.771Z"
+  },
+  {
+    "emailId": "REF-16",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.773Z"
+  },
+  {
+    "emailId": "REF-17",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.775Z"
+  },
+  {
+    "emailId": "REF-18",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.777Z"
+  },
+  {
+    "emailId": "REF-19",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.780Z"
+  },
+  {
+    "emailId": "REF-20",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.782Z"
+  },
+  {
+    "emailId": "REF-21",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.784Z"
+  },
+  {
+    "emailId": "REF-22",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.786Z"
+  },
+  {
+    "emailId": "REF-23",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.789Z"
+  },
+  {
+    "emailId": "REF-24",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.791Z"
+  },
+  {
+    "emailId": "REF-25",
+    "category": "REFUND_OR_CANCELLATION",
+    "promptVersion": "v1.2.0",
+    "generatedDraft": "We are reviewing your refund request.",
+    "finalSentReply": "We are reviewing your refund request.",
+    "action": "APPROVE",
+    "editDiffRatio": 0,
+    "timestamp": "2026-10-20T13:43:22.793Z"
+  }
+]
